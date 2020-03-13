@@ -8,17 +8,50 @@
   </head>
   <body>
     <div id="app">
-      {{ message }}
+      <h1>{{ title }}</h1>
+      <div>
+        <ul>
+          <li v-for="word in words">
+            {{word}}
+          </li>
+        </ul>
+      </div>
     </div>
 
     <script>
-
       var app = new Vue({
-
-          el: '#app',
-          data: {
-              message: 'Hello Vue!'
-      })
+        el: "#app",
+        data: {
+          title: "Wordchain",
+          words: [
+            "Alg",
+            "Ben",
+            "Col",
+            "Dae",
+            "Ele",
+            "Fol",
+            "Gor",
+            "Hia",
+            "Ial",
+            "Jal",
+            "Lac",
+            "Mat",
+            "Neo",
+            "Osp",
+            "Pan",
+            "Qua",
+            "Rub",
+            "San",
+            "Tel",
+            "Una",
+            "Ver",
+            "Welt",
+            "Xyz",
+            "Ytt",
+            "Zol"
+          ]
+        }
+      });
     </script>
   </body>
 </html>
