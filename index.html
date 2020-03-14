@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WordChain with Vue</title>
-    <style>
-      body {
-        background-color: grey;
-      }
-    </style>
+    <link rel="stylesheet" href="app.css" />
+
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
@@ -27,47 +24,6 @@
       </div>
     </div>
 
-    <script>
-      var app = new Vue({
-        el: "#app",
-        data: {
-          newWord: "",
-          title: "Wordchain",
-          words: [
-            "Alg",
-            "Ben",
-            "Col",
-            "Dae",
-            "Ele",
-            "Fol",
-            "Gor",
-            "Hia",
-            "Ial",
-            "Jal",
-            "Lac",
-            "Mat",
-            "Neo",
-            "Osp",
-            "Pan",
-            "Qua",
-            "Rub",
-            "San",
-            "Tel",
-            "Una",
-            "Ver",
-            "Welt",
-            "Xyz",
-            "Ytt",
-            "Zol"
-          ]
-        },
-        methods: {
-          addWord: function() {
-            this.words.push(this.newWord);
-            this.newWord = "";
-          }
-        }
-      });
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>
