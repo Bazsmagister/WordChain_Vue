@@ -22,13 +22,7 @@
         </ul>
       </div>
       <div>
-        <input
-          type="text"
-          name="userWord"
-          id="userWord"
-          v-model="newWord"
-          v-on:keyUp="addWord"
-        />
+        <input type="text" name="userWord" id="userWord" v-model="newWord" />
         <button v-on:click="addWord">Add word to the list</button>
       </div>
     </div>
