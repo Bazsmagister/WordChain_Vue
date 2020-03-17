@@ -2,6 +2,7 @@ var app = new Vue({
   el: "#app",
   data: {
     newWord: "",
+
     title: "Wordchain",
     words: [
       "Alg",
@@ -35,6 +36,12 @@ var app = new Vue({
     addWord: function() {
       this.words.push(this.newWord);
       this.newWord = "";
+    },
+    lastletter: function() {
+      //this.lastletter = this.newWord.slice(-1);
+      lastletter = this.newWord.charAt(stringLength - 1);
+      console.log(lastletter);
+      //alert(lastletter);
     }
   }
 });

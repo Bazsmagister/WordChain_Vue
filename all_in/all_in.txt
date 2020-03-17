@@ -28,3 +28,18 @@ v-on:keyUp="addWord"
 
     <script src="app.js"></script>
   </body>
+
+
+
+  <div>
+        What is your word?
+        <br />
+
+        <form>
+          <label for="userWord">Your words:</label><br />
+          <input type="text" id="userWord" name="userWord" /><br />
+        </form>
+      </div>
+
+
+      lastletter = newWord.substr(string.length - 1);
