@@ -1,1 +1,9 @@
 v-on:keyUp="addWord"
+
+
+
+<ul>
+    <li v-for="word in words">
+              {{word}}
+    </li>
+</ul>
