@@ -33,15 +33,15 @@ var app = new Vue({
     ]
   },
   methods: {
-    addWord: function() {
+    addWord: function () {
       this.words.push(this.newWord);
       this.newWord = "";
     },
-    lastletter: function() {
+    lastletter: function () {
       //this.lastletter = this.newWord.slice(-1);
-      lastletter = this.newWord.charAt(stringLength - 1);
-      console.log(lastletter);
-      //alert(lastletter);
+      this.thelastletter = newWord.charAt(stringLength - 1);
+      //console.log(thelastletter);
+      alert(thelastletter);
     }
   }
 });
