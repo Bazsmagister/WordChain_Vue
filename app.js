@@ -39,9 +39,9 @@ var app = new Vue({
     },
     lastletter: function () {
       //this.lastletter = this.newWord.slice(-1);
-      this.thelastletter = newWord.charAt(stringLength - 1);
+      this.thelastletter = this.newWord.charAt((this.newWord.length) - 1);
       //console.log(thelastletter);
-      alert(thelastletter);
+      alert(this.thelastletter);
     }
   }
 });
