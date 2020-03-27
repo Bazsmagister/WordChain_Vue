@@ -2,7 +2,6 @@ var app = new Vue({
   el: "#app",
   data: {
     newWord: "",
-
     title: "Wordchain",
     words: [
       "Alg",
@@ -33,15 +32,23 @@ var app = new Vue({
     ]
   },
   methods: {
-    addWord: function () {
+    addWord: function() {
       this.words.push(this.newWord);
       this.newWord = "";
     },
-    lastletter: function () {
+    lastletter: function() {
       //this.lastletter = this.newWord.slice(-1);
-      this.thelastletter = this.newWord.charAt((this.newWord.length) - 1);
-      //console.log(thelastletter);
+      this.thelastletter = this.newWord.charAt(this.newWord.length - 1);
+
+      //console.log(this.thelastletter);
       alert(this.thelastletter);
+
+      //this.words.forEach(element => console.log(element));
+      for (let index = 0; index < this.words.length; index++) {
+        if (this.words[index].charAt(0) == this.thelastletter) {
+          alert(this.words[index]);
+        }
+      }
     }
   }
 });

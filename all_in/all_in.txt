@@ -43,3 +43,27 @@ v-on:keyUp="addWord"
 
 
       lastletter = newWord.substr(string.length - 1);
+
+
+
+      words.forEach(myFunction);
+
+      function myFunction(item, index) {
+        document.getElementById("demo").innerHTML +=
+          index + ":" + item + "<br>";
+      }
+
+
+       myaction: function() {
+       words.forEach(element => alert(element));
+    }
+
+
+<div>
+      <button v-on:click="myaction">myaction</button>
+    </div>
+
+
+     if (this.words.includes(this.thelastletter, 0)) {
+          alert(words[index]);
+        }
