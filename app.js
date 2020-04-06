@@ -28,27 +28,35 @@ var app = new Vue({
       "Welt",
       "Xyz",
       "Ytt",
-      "Zol"
-    ]
+      "Zol",
+    ],
   },
   methods: {
-    addWord: function() {
+    addWord: function () {
       this.words.push(this.newWord);
-      this.newWord = "";
+      //this.newWord = "";
     },
-    lastletter: function() {
+    lastletter: function () {
       //this.lastletter = this.newWord.slice(-1);
-      this.thelastletter = this.newWord.charAt(this.newWord.length - 1);
+      const thelastletter = this.newWord.charAt(this.newWord.length - 1);
 
       //console.log(this.thelastletter);
-      alert(this.thelastletter);
+      //alert(this.thelastletter);
 
-      //this.words.forEach(element => console.log(element));
+      for (let index = 0; index < this.words.length; index++) {
+        if (this.words[index].charAt(0) == thelastletter) {
+          //alert(this.words[index]);
+          console.log(this.words[index]);
+        }
+      }
+    },
+
+    //this.words.forEach(element => console.log(element));
+    /*
       for (let index = 0; index < this.words.length; index++) {
         if (this.words[index].charAt(0) == this.thelastletter) {
           alert(this.words[index]);
         }
-      }
-    }
-  }
+      }*/
+  },
 });

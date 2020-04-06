@@ -67,3 +67,20 @@ v-on:keyUp="addWord"
      if (this.words.includes(this.thelastletter, 0)) {
           alert(words[index]);
         }
+
+
+          for (let index = 0; index < this.words.length; index++) {
+        if (this.words[index].charAt(0) == this.thelastletter) {
+          alert(this.words[index]);
+        }
+      }
+
+
+
+
+      for (let index = 0; index < this.words.length; index++) {
+        var x = this.words.map(words => words[0]);
+        if (x == this.thelastletter) {
+          alert(x);
+        }
+      }
