@@ -3,6 +3,8 @@ var app = new Vue({
   data: {
     newWord: "",
     title: "Wordchain",
+    last_word: "",
+    thelastletter: "",
     //props: ["thelastletter"],
     words: [
       "Alg",
@@ -33,35 +35,34 @@ var app = new Vue({
     ],
   },
   methods: {
-    addWord: function () {
+    addWord() {
       this.words.push(this.newWord);
-      //this.newWord = "";
+      this.newWord = "";
       //alert the last element of the array:
       //alert(this.words[this.words.length - 1]);
     },
-    lastletter: function () {
+    lastword() {
+      var last_word = this.words[this.words.length - 1];
+      alert(last_word);
+      return last_word;
+    },
+    lastwordslastletter() {
+      var thelastletter = this.last_word.charAt(this.last_word.length - 1);
+      alert(thelastletter);
+      return thelastletter;
+    },
+    lastletter() {
       //let thelastletter = this.newWord.reverse()[0];
       //let thelastletter = this.newWord.slice(-1)[0];
       //let thelastletter = this.newWord.slice(-1).pop();
-      let thelastletter = this.newWord.charAt(this.newWord.length - 1);
-
-      console.log(thelastletter);
+      //let thelastletter = this.newWord.charAt(this.newWord.length - 1);
+      //let thelastletter = words[words.length].charAt(this.newWord.length - 1);
+      //let thelastletter = words[words.length];
+      //console.log(thelastletter);
       //alert(this.thelastletter);
-
-      for (let index = 0; index < this.words.length; index++) {
-        if (this.words[index].charAt(0) == thelastletter) {
-          //alert(this.words[index]);
-          alert(this.words[index]);
-        }
-      }
+      //alert(thelastletter);
+      //return thelastletter;
+      //alert(this.thelastletter);
     },
-
-    //this.words.forEach(element => console.log(element));
-    /*
-      for (let index = 0; index < this.words.length; index++) {
-        if (this.words[index].charAt(0) == this.thelastletter) {
-          alert(this.words[index]);
-        }
-      }*/
   },
 });

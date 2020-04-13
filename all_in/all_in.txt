@@ -84,3 +84,21 @@ v-on:keyUp="addWord"
           alert(x);
         }
       }
+
+
+      //this.words.forEach(element => console.log(element));
+    /*
+      for (let index = 0; index < this.words.length; index++) {
+        if (this.words[index].charAt(0) == this.thelastletter) {
+          alert(this.words[index]);
+        }
+      }*/
+
+
+      for (var index = 0; index < this.words.length; index++) {
+        if (this.words[index].charAt(0) == thelastletter) {
+          //console.log(this.words[index]);
+          alert(this.words[index]);
+          //break;
+        }
+      }
