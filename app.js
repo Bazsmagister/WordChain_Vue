@@ -36,33 +36,37 @@ var app = new Vue({
   },
   methods: {
     addWord() {
+      //this.words += this.words.push(this.newWord);
       this.words.push(this.newWord);
+
       this.newWord = "";
+      //return this.words;
       //alert the last element of the array:
       //alert(this.words[this.words.length - 1]);
+      alert(this.words);
+      return this.words;
     },
-    lastword() {
-      var last_word = this.words[this.words.length - 1];
+    lastwordandlastletter() {
+      last_word = this.words[this.words.length - 1];
       alert(last_word);
-      return last_word;
-    },
-    lastwordslastletter() {
-      var thelastletter = this.last_word.charAt(this.last_word.length - 1);
+      //return last_word;
+      thelastletter = last_word.charAt(last_word.length - 1);
       alert(thelastletter);
-      return thelastletter;
-    },
-    lastletter() {
-      //let thelastletter = this.newWord.reverse()[0];
-      //let thelastletter = this.newWord.slice(-1)[0];
-      //let thelastletter = this.newWord.slice(-1).pop();
-      //let thelastletter = this.newWord.charAt(this.newWord.length - 1);
-      //let thelastletter = words[words.length].charAt(this.newWord.length - 1);
-      //let thelastletter = words[words.length];
-      //console.log(thelastletter);
-      //alert(this.thelastletter);
-      //alert(thelastletter);
       //return thelastletter;
-      //alert(this.thelastletter);
+      //alert(this.words[10]);
+
+      var x;
+      var y;
+      for (x of this.words) {
+        y = x.toLowerCase();
+        if (y.charAt(0) == thelastletter) {
+
+          alert(y);
+        }
+      }
+
     },
+
+
   },
 });

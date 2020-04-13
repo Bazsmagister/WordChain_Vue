@@ -20,20 +20,15 @@
       </li>
     </ul>
     <div>
-      <button v-on:click="lastword">Show me the last word</button>
-    </div>
-    <div>
-      <button v-on:click="lastwordslastletter">Show me the last word's last letter</button>
+      <button v-on:click="lastwordandlastletter">Show me the last word and last letter</button>
     </div>
 
+
     <div>
-      <input type="text" name="userWord" id="userWord" v-model="newWord" required />
+      <input type="text" name="newWord" id="newWord" v-model="newWord" required />
     </div>
     <div>
       <button v-on:click="addWord">Add word to the list</button>
-    </div>
-    <div>
-      <button v-on:click="lastletter">Show me the last letter</button>
     </div>
 
 
